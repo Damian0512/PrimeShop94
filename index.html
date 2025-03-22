@@ -64,6 +64,7 @@
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             transition: transform 0.3s;
+            cursor: pointer;
         }
         .product:hover {
             transform: scale(1.05);
@@ -100,14 +101,14 @@
     </section>
     
     <section class="products">
-        <div class="product" onclick="window.location.href='ledy-galaxy.html'">
+        <a href="ledy-galaxy.html" class="product">
             <img src="image1.png" alt="Ledy Galaxy" onerror="this.onerror=null; this.src='placeholder.png';">
             <p>Ledy Galaxy</p>
-        </div>
-        <div class="product" onclick="window.location.href='nawilzacz-powietrza.html'">
+        </a>
+        <a href="nawilzacz-powietrza.html" class="product">
             <img src="humidifier.png" alt="Nawilżacz Powietrza" onerror="this.onerror=null; this.src='placeholder.png';">
             <p>Nawilżacz Powietrza</p>
-        </div>
+        </a>
     </section>
     
     <footer>
