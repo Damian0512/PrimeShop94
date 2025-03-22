@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ledy Galaxy - PrimeShop94</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/webp" href="logoV2.webp">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #fff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 3px solid #007BFF;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            width: 160px;
+        }
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #007BFF;
+        }
+        .product-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .product-container img {
+            max-width: 90%;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        .product-info {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #444;
+        }
+        .product-info ul {
+            list-style: none;
+            padding: 0;
+        }
+        .product-info li {
+            background: #eef5ff;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .buy-button {
+            display: inline-block;
+            background: #007BFF;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .buy-button:hover {
+            background: #0056b3;
+        }
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+        .customer-reviews {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .customer-reviews h3 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logoV2.webp" alt="PrimeShop94 Logo" class="logo" onerror="this.onerror=null; this.src='placeholder.png';">
+        <nav>
+            <a href="index.html">Strona Główna</a>
+            <a href="#">Kategorie</a>
+            <a href="#">Kontakt</a>
+        </nav>
+    </header>
+    
+    <section class="product-container">
+        <h1>Ledy Galaxy</h1>
+        <img src="images/image1.png" alt="Ledy Galaxy" onerror="this.onerror=null; this.src='images/placeholder.png';">
+        <img src="images/image2.png" alt="Ledy Galaxy w różnych kolorach" onerror="this.onerror=null; this.src='images/placeholder.png';">
+        <img src="images/image3.png" alt="Efekty świetlne" onerror="this.onerror=null; this.src='images/placeholder.png';">
+        <img src="images/image4.png" alt="Ledy Galaxy w pokoju" onerror="this.onerror=null; this.src='images/placeholder.png';">
+        <div class="product-info">
+            <p>
+                Odkryj magiczny klimat z projektorem Ledy Galaxy! Twórz niepowtarzalną atmosferę w swoim pokoju dzięki
+                efektom świetlnym, które imitują galaktykę. Idealny na prezent lub jako sposób na relaks!
+            </p>
+            <ul>
+                <li>Różne tryby kolorów i intensywności światła</li>
+                <li>Zdalne sterowanie pilotem</li>
+                <li>Łatwe podłączenie przez USB</li>
+                <li>Świetna dekoracja do sypialni, salonu czy pokoju dziecięcego</li>
+            </ul>
+        </div>
+        <a href="#" class="buy-button">Kup Teraz</a>
+        
+        <div class="customer-reviews">
+            <h3>Opinie klientów</h3>
+            <p>⭐⭐⭐⭐⭐ "Świetna jakość, efekt wygląda niesamowicie!" - Kasia</p>
+            <p>⭐⭐⭐⭐⭐ "Idealne na prezent, bardzo szybka dostawa." - Piotr</p>
+            <p>⭐⭐⭐⭐ "Bardzo fajny efekt, ale pilot mógłby mieć więcej funkcji." - Marta</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 PrimeShop94.</p>
+        <p>Kontakt: <a href="mailto:primeshop944@gmail.com" style="color:#fff;">primeshop944@gmail.com</a></p>
+    </footer>
+</body>
+</html>
