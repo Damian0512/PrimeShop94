@@ -22,14 +22,12 @@
         }
         .products {
             display: flex;
-            overflow: hidden;
-            width: 100%;
+            flex-wrap: wrap;
             justify-content: center;
             margin-top: 20px;
-            position: relative;
         }
         .product {
-            flex: 0 0 300px;
+            width: 300px;
             margin: 20px;
             background: rgba(255, 255, 255, 0.1);
             padding: 15px;
@@ -43,36 +41,6 @@
             color: gold;
             text-decoration: none;
             font-weight: bold;
-        }
-        footer {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 10px;
-            margin-top: 20px;
-        }
-        form {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-        input, select, textarea, button {
-            display: block;
-            width: 80%;
-            margin: 10px auto;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-        }
-        button {
-            background: gold;
-            color: black;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .product img {
-            width: 100%;
-            border-radius: 10px;
-            cursor: pointer;
         }
         .gallery img {
             width: 80px;
@@ -136,6 +104,7 @@
     
     <footer>
         <p>&copy; 2025 PrimeShop94.</p>
+        <p>Kontakt: <a href="mailto:primeshop944@gmail.com">primeshop944@gmail.com</a></p>
     </footer>
 
     <script>
