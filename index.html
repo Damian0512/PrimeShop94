@@ -9,76 +9,110 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
-            color: white;
-            text-align: center;
+            background: #f4f4f4;
+            color: #333;
             margin: 0;
             padding: 0;
         }
         header {
-            background: rgba(0, 0, 0, 0.8);
+            background: #fff;
             padding: 20px;
-            font-size: 24px;
-            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #ddd;
         }
         .logo {
             width: 150px;
-            position: absolute;
-            left: 20px;
-            top: 10px;
         }
-        .welcome {
-            font-size: 18px;
-            margin-bottom: 10px;
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .categories {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            gap: 15px;
+            background: #eee;
+        }
+        .categories a {
+            text-decoration: none;
+            color: #000;
+            background: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         .products {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
         }
         .product {
-            width: 300px;
-            height: 300px;
-            margin: 20px;
-            background: rgba(255, 255, 255, 0.1);
+            background: #fff;
+            padding: 15px;
+            text-align: center;
             border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             transition: transform 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
         }
         .product:hover {
             transform: scale(1.05);
         }
         .product img {
-            max-width: 80%;
-            max-height: 80%;
+            max-width: 100%;
             border-radius: 10px;
+        }
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <header>
         <img src="logoV2.webp" alt="PrimeShop94 Logo" class="logo" onerror="this.onerror=null; this.src='placeholder.png';">
-        <p class="welcome">Witaj w PrimeShop94! Znajdź swój idealny gadżet.</p>
-        <h1>PrimeShop94</h1>
+        <nav>
+            <a href="#">Strona Główna</a>
+            <a href="#">Kategorie</a>
+            <a href="#">Kontakt</a>
+        </nav>
     </header>
+    
+    <section class="categories">
+        <a href="#">Na prezent</a>
+        <a href="#">Do pielęgnacji</a>
+        <a href="#">Do zabawy</a>
+        <a href="#">Do żartu</a>
+        <a href="#">Sposób na nudę</a>
+    </section>
     
     <section class="products">
         <div class="product" onclick="window.location.href='ledy-galaxy.html'">
             <img src="image1.png" alt="Ledy Galaxy" onerror="this.onerror=null; this.src='placeholder.png';">
+            <p>Ledy Galaxy</p>
         </div>
-        
         <div class="product" onclick="window.location.href='nawilzacz-powietrza.html'">
             <img src="humidifier.png" alt="Nawilżacz Powietrza" onerror="this.onerror=null; this.src='placeholder.png';">
+            <p>Nawilżacz Powietrza</p>
         </div>
     </section>
     
     <footer>
         <p>&copy; 2025 PrimeShop94.</p>
-        <p>Kontakt: <a href="mailto:primeshop944@gmail.com">primeshop944@gmail.com</a></p>
+        <p>Kontakt: <a href="mailto:primeshop944@gmail.com" style="color:#fff;">primeshop944@gmail.com</a></p>
     </footer>
 </body>
 </html>
