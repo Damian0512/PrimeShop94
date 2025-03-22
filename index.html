@@ -72,6 +72,35 @@
         .product img {
             width: 100%;
             border-radius: 10px;
+            cursor: pointer;
+        }
+        .gallery img {
+            width: 80px;
+            height: 80px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        #modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            justify-content: center;
+        }
+        #modal img {
+            max-width: 80%;
+            max-height: 80%;
         }
     </style>
 </head>
@@ -82,11 +111,15 @@
     
     <section class="products">
         <div class="product">
-            <img src="led1.png" alt="Ledy Galaxy">
             <h2>Ledy Galaxy</h2>
             <p>Magiczne światła do Twojego pokoju.</p>
-            <p class="price">99.99 PLN</p>
-            <a href="https://pl.aliexpress.com/item/1005007713213089.html" target="_blank">Sprawdź szczegóły</a>
+            <p class="price">79.99 PLN</p>
+            <div class="gallery">
+                <img src="image1.png" onclick="openModal('image1.png')">
+                <img src="image2.png" onclick="openModal('image2.png')">
+                <img src="image3.png" onclick="openModal('image3.png')">
+            </div>
+            <a href="ledy-galaxy.html">Sprawdź szczegóły</a>
         </div>
         
         <div class="product">
@@ -97,44 +130,22 @@
         </div>
     </section>
     
-    <section>
-        <h2>Złóż zamówienie</h2>
-        <form id="order-form">
-            <label>Wybierz produkt:</label>
-            <select name="product">
-                <option value="ledy-galaxy">Ledy Galaxy - 99.99 PLN</option>
-                <option value="nawilzacz-powietrza">Nawilżacz Powietrza - 79.99 PLN</option>
-            </select>
-            <label>Imię i Nazwisko:</label>
-            <input type="text" name="name" required>
-            <label>Email:</label>
-            <input type="email" name="email" required>
-            <label>Adres:</label>
-            <textarea name="address" required></textarea>
-            <button type="submit">Zamów</button>
-        </form>
-    </section>
+    <div id="modal" onclick="closeModal()">
+        <img id="modal-img">
+    </div>
     
     <footer>
         <p>&copy; 2025 PrimeShop94. Wszelkie prawa zastrzeżone.</p>
     </footer>
 
     <script>
-        document.getElementById("order-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            const formData = new FormData(this);
-            const orderData = {};
-            formData.forEach((value, key) => { orderData[key] = value; });
-            
-            fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec", {
-                method: "POST",
-                body: JSON.stringify(orderData),
-                headers: { "Content-Type": "application/json" }
-            })
-            .then(response => response.json())
-            .then(data => alert("Zamówienie zostało zapisane!"))
-            .catch(error => alert("Wystąpił błąd. Spróbuj ponownie."));
-        });
+        function openModal(src) {
+            document.getElementById("modal-img").src = src;
+            document.getElementById("modal").style.display = "flex";
+        }
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
     </script>
 </body>
 </html>
