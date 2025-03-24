@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PrimeShop94 - Sklep z Gadżetami</title>
+    <title>PrimeShop94 - Sklep</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/webp" href="logoV2.webp">
     <style>
@@ -33,45 +33,19 @@
             text-decoration: none;
             color: #333;
             font-weight: bold;
-        }
-        .categories {
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-            gap: 15px;
-            background: #eee;
-        }
-        .categories a {
-            text-decoration: none;
-            color: #000;
-            background: #fff;
-            padding: 10px 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .product {
-            background: #fff;
-            padding: 15px;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
             cursor: pointer;
         }
-        .product:hover {
-            transform: scale(1.05);
-        }
-        .product img {
-            max-width: 100%;
+        .content {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
             border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .hidden {
+            display: none;
         }
         footer {
             background: #222;
@@ -84,74 +58,55 @@
 </head>
 <body>
     <header>
-        <img src="logoV2.webp" alt="PrimeShop94 Logo" class="logo" onerror="this.onerror=null; this.src='placeholder.png';">
-        <nav>
-            <a href="#">Strona Główna</a>
-            <a href="#">Kategorie</a>
-            <a href="#">Kontakt</a>
-        </nav>
-    </header>
-    
-    <section class="categories">
-        <a href="#">Na prezent</a>
-        <a href="#">Do pielęgnacji</a>
-        <a href="#">Do zabawy</a>
-        <a href="#">Do żartu</a>
-        <a href="#">Sposób na nudę</a>
-    </section>
-    
-    <section class="products">
-        <a href="ledy-galaxy.html" class="product">
-            <img src="image1.png" alt="Ledy Galaxy" onerror="this.onerror=null; this.src='placeholder.png';">
-            <p>Ledy Galaxy</p>
-        </a>
-        <a href="nawilzacz-powietrza.html" class="product">
-            <img src="humidifier.png" alt="Nawilżacz Powietrza" onerror="this.onerror=null; this.src='placeholder.png';">
-            <p>Nawilżacz Powietrza</p>
-        </a>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 PrimeShop94.</p>
-        <p>Kontakt: <a href="mailto:primeshop944@gmail.com" style="color:#fff;">primeshop944@gmail.com</a></p>
-    </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PrimeShop94 - Strona Główna</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/webp" href="logoV2.webp">
-</head>
-<body>
-    <header>
         <img src="logoV2.webp" alt="PrimeShop94 Logo" class="logo">
         <nav>
-            <a href="index.html">Strona Główna</a>
-            <a href="ledy-galaxy.html">Ledy Galaxy</a>
-            <a href="#">Kategorie</a>
-            <a href="#">Kontakt</a>
+            <a onclick="showSection('home')">Strona Główna</a>
+            <a onclick="showSection('ledy-galaxy')">Ledy Galaxy</a>
+            <a onclick="showSection('categories')">Kategorie</a>
+            <a onclick="showSection('contact')">Kontakt</a>
         </nav>
     </header>
 
-    <section class="main-container">
+    <section id="home" class="content">
         <h1>Witamy w PrimeShop94!</h1>
         <p>Wybierz produkt, który Cię interesuje.</p>
+        <img src="images/shop-banner.png" alt="Sklep" style="width: 80%; border-radius: 10px;">
+    </section>
 
-        <!-- Przekierowanie przez kliknięcie w ikonę -->
-        <a href="ledy-galaxy.html">
-            <img src="images/ledy-galaxy-icon.png" alt="Ledy Galaxy" style="width:200px; height:auto; cursor:pointer;">
-        </a>
-        
-        <p>Kliknij na ikonę, aby przejść do produktu Ledy Galaxy.</p>
+    <section id="ledy-galaxy" class="content hidden">
+        <h1>Ledy Galaxy</h1>
+        <div class="image-gallery">
+            <img src="images/image1.png" alt="Ledy Galaxy">
+            <img src="images/image2.png" alt="Ledy Galaxy w różnych kolorach">
+        </div>
+        <p>Odkryj magiczny klimat z projektorem Ledy Galaxy! Twórz niepowtarzalną atmosferę w swoim pokoju.</p>
+        <a href="#" style="display:inline-block; background:#007BFF; color:#fff; padding:10px 20px; border-radius:5px; text-decoration:none;">Kup Teraz</a>
+    </section>
+
+    <section id="categories" class="content hidden">
+        <h1>Kategorie</h1>
+        <p>Przeglądaj nasze produkty według kategorii.</p>
+    </section>
+
+    <section id="contact" class="content hidden">
+        <h1>Kontakt</h1>
+        <p>Skontaktuj się z nami pod adresem: <a href="mailto:primeshop944@gmail.com">primeshop944@gmail.com</a></p>
     </section>
 
     <footer>
         <p>&copy; 2025 PrimeShop94.</p>
-        <p>Kontakt: <a href="mailto:primeshop944@gmail.com" style="color:#fff;">primeshop944@gmail.com</a></p>
     </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Ukryj wszystkie sekcje
+            document.querySelectorAll('.content').forEach(section => {
+                section.classList.add('hidden');
+            });
+
+            // Pokaż tylko wybraną sekcję
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
